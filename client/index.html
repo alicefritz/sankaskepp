@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Sänka Skepp</title>
+</head>
+<body>
+  <div class="container">
+    <form id="join-form">
+      <h1>Sänka Skepp</h1>
+      <label for="">Enter room code to join game (if the room does not exist a new room will be created)</label>
+      <input type="text" id="room-code">
+      <input type="submit" value="Join game">
+    </form>
+  </div>
+
+
+
+  <script>
+    const form = document.querySelector('#join-form')
+    const roomCodeInput = document.querySelector('#room-code')
+
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      const roomCode = roomCodeInput.value
+      window.location = `multiplayer?room=${roomCode}`
+    }
+
+    form.addEventListener('submit', handleSubmit)
+  </script>
+</body>
+</html>

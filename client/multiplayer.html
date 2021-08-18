@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js" defer></script>
+  <title>Sänka skepp - room </title>
+</head>
+<body>
+  <div class="boards">
+    <div id="user-board" class="board"></div>
+    <div class="status-container">
+      <p class="player-1-status status">Player 1 not connected<div class="player-1-i indicator"></div></p>
+      <p class="player-2-status status">Player 2 not connected<div class="player-2-i indicator"></div></p>
+      <p class="latest-status"></p>
+    </div>
+    <div id="opponent-board" class="board"></div>
+  </div>
+  <div class="game-controls">
+    <h2 class="game-info">Place your ships and press start</h2>
+    <div>
+      <button id="rotate">Rotate ships</button>
+      <button id="start-game-button">Start Game</button>
+    </div>
+  </div>
+  <div class="ships-container">
+    <div class="small ship" draggable="true">
+      <div class="ship-square" id="small-0"></div>
+      <div class="ship-square" id="small-1"></div>
+    </div>
+    <div class="medium ship" draggable="true">
+      <div class="ship-square" id="medium-0"></div>
+      <div class="ship-square" id="medium-1"></div>
+      <div class="ship-square" id="medium-2"></div>
+    </div>
+    <div class="large ship" draggable="true">
+      <div class="ship-square" id="large-0"></div>
+      <div class="ship-square" id="large-1"></div>
+      <div class="ship-square" id="large-2"></div>
+      <div class="ship-square" id="large-3"></div>
+    </div>
+    <div class="huge ship" draggable="true">
+      <div class="ship-square" id="huge-0"></div>
+      <div class="ship-square" id="huge-1"></div>
+      <div class="ship-square" id="huge-2"></div>
+      <div class="ship-square" id="huge-3"></div>
+      <div class="ship-square" id="huge-4"></div>
+    </div>
+  </div>
+</body>
+</html>
