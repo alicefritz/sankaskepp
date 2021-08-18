@@ -16,8 +16,8 @@ app.get('/multiplayer', (req, res) => {
   res.sendFile(__dirname + '/client/multiplayer.html');
 });
 
-server.listen(3000, () => {
-  console.log('listening on *:3000');
+server.listen(PORT, () => {
+  console.log(`listening on *:${PORT}`);
 });
 
 const activeGames = []
